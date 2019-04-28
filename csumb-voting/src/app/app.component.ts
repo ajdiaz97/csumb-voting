@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatSnackBar } from '@angular/material';
 
 import { AddIssueDialogComponent } from './add-issue-dialog/add-issue-dialog.component';
+import JSON from '../assets/json/service.json';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ import { AddIssueDialogComponent } from './add-issue-dialog/add-issue-dialog.com
 export class AppComponent implements OnInit {
   constructor(readonly dialog: MatDialog, readonly snackbar: MatSnackBar) {
     // Read in object here using service.
+    console.log(JSON);
   }
 
   ngOnInit() {
