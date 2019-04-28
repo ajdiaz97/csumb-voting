@@ -38,6 +38,7 @@ import { AddIssueDialogComponent } from './add-issue-dialog/add-issue-dialog.com
     MatCardModule,
   ],
   providers: [],
+  entryComponents: [AddIssueDialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
