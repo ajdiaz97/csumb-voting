@@ -13,9 +13,11 @@ Single Page Application: CSUMB Voting Main Page
       <span>I'm an issue thingy.</span>
     </div>
   </div>
-
+  <tr *ngFor="let a of arrinfo">
+    <td>{{a.name}} - {{a.description}} - {{a.upvotes}} - {{a.downvotes}} - {{a.comments}}</td>
+  </tr>
   <div id="add-issue-button">
     <!-- This holds the button for adding an issue -->
-    <button mat-raised-button (click)=addIssue()>Add an issue</button>
+    <button mat-raised-button>Add an issue</button>
   </div>
 </div>

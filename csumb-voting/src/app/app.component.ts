@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatSnackBar } from '@angular/material';
-
+import {HttpClient} from '@angular/common/http';
+import {HttpErrorResponse} from '@angular/common/http';
 import { AddIssueDialogComponent } from './add-issue-dialog/add-issue-dialog.component';
 import JSON from '../assets/json/service.json';
 
@@ -11,13 +12,27 @@ import JSON from '../assets/json/service.json';
 })
 
 export class AppComponent implements OnInit {
-  constructor(readonly dialog: MatDialog, readonly snackbar: MatSnackBar) {
-    // Read in object here using service.
-    console.log(JSON);
+
+  title = "meme";
+  arrinfo: string [];
+
+  constructor(readonly dialog: MatDialog, readonly snackbar: MatSnackBar, private httpService: HttpClient) {
+    // Read in object here using service. 
   }
 
+  
   ngOnInit() {
     // Initialize object here if needed.
+
+    this.httpService.get('../assets/json/service.json').subscribe(
+      data => {
+        this.arrinfo = data as string [];
+        console.log(this.arrinfo);
+      },
+      (err: HttpErrorResponse) => {
+        console.log(err.message);
+      }
+    );
   }
 
   addIssue() {
