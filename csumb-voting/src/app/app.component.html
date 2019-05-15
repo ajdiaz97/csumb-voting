@@ -2,22 +2,18 @@
 Single Page Application: CSUMB Voting Main Page
 -->
 <div id="content">
+  <div id="title-head">
   <h1 id="title">CSUMB Voting Reddit Thing</h1>
-  <div id="tools-container">
-    <!-- This holds the tools like filters and update -->
-  </div>
+</div>
 
-  <div id="issues">
-    <!-- This holds the issue mat-cards -->
-    <div id="issue01">
-      <span>I'm an issue thingy.</span>
-    </div>
-  </div>
+  <div id="issues" fxGrow fxLayoutAlign="center center">
   <tr *ngFor="let a of arrinfo; let idx = index">
     <td>{{a.name}} - {{a.description}}</td>
     <td> Votes: {{a.upvotes}} </td>
     <td><button class = "btn upvote" (click) = "upVote(idx)">up</button><button class = "btn downvote" (click) = "downVote(idx)">down</button></td>
   </tr>
+</div>
+
   <div id="add-issue-button">
     <!-- This holds the button for adding an issue -->
     <button mat-raised-button>Add an issue</button>
