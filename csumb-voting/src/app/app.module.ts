@@ -40,7 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [],
-  entryComponents: [AddIssueDialogComponent],
+  entryComponents: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

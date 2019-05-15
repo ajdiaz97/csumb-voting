@@ -4,6 +4,14 @@ import {HttpClient} from '@angular/common/http';
 import {HttpErrorResponse} from '@angular/common/http';
 import { AddIssueDialogComponent } from './add-issue-dialog/add-issue-dialog.component';
 
+interface Issues {
+  name: string;
+  description: string;
+  upvotes: number;
+  downvotes: number;
+  comments: string[];
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,21 +19,19 @@ import { AddIssueDialogComponent } from './add-issue-dialog/add-issue-dialog.com
 })
 
 export class AppComponent implements OnInit {
-
-  title = "meme";
-  arrinfo: string [];
+  arrinfo: Issues[];
 
   constructor(readonly dialog: MatDialog, readonly snackbar: MatSnackBar, private httpService: HttpClient) {
-    // Read in object here using service. 
+    // Read in object here using service.
   }
 
-  
   ngOnInit() {
     // Initialize object here if needed.
 
     this.httpService.get('../assets/json/service.json').subscribe(
       data => {
-        this.arrinfo = data as string [];
+        this.arrinfo = data as Issues[];
+
         console.log(this.arrinfo);
       },
       (err: HttpErrorResponse) => {
@@ -43,10 +49,11 @@ export class AppComponent implements OnInit {
       console.log('I did it');
     });
   }
+
   upVote(idx){
     this.arrinfo[idx].upvotes++;
-    this.arrinfo[idx].upvotes.push(this.arrinfo[idx].upvotes);
   }
+
   downVote(idx){
     this.arrinfo[idx].upvotes--;
   }
