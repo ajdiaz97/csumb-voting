@@ -13,8 +13,10 @@ Single Page Application: CSUMB Voting Main Page
       <span>I'm an issue thingy.</span>
     </div>
   </div>
-  <tr *ngFor="let a of arrinfo">
-    <td>{{a.name}} - {{a.description}} - {{a.upvotes}} - {{a.downvotes}} - {{a.comments}}</td>
+  <tr *ngFor="let a of arrinfo; let idx = index">
+    <td>{{a.name}} - {{a.description}}</td>
+    <td> Votes: {{a.upvotes}} </td>
+    <td><button class = "btn upvote" (click) = "upVote(idx)">up</button><button class = "btn downvote" (click) = "downVote(idx)">down</button></td>
   </tr>
   <div id="add-issue-button">
     <!-- This holds the button for adding an issue -->

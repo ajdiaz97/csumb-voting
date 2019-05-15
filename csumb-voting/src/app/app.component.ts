@@ -3,7 +3,6 @@ import { MatDialog, MatSnackBar } from '@angular/material';
 import {HttpClient} from '@angular/common/http';
 import {HttpErrorResponse} from '@angular/common/http';
 import { AddIssueDialogComponent } from './add-issue-dialog/add-issue-dialog.component';
-import JSON from '../assets/json/service.json';
 
 @Component({
   selector: 'app-root',
@@ -43,6 +42,13 @@ export class AppComponent implements OnInit {
     dialogRef.afterClosed().subscribe(ni => {
       console.log('I did it');
     });
+  }
+  upVote(idx){
+    this.arrinfo[idx].upvotes++;
+    this.arrinfo[idx].upvotes.push(this.arrinfo[idx].upvotes);
+  }
+  downVote(idx){
+    this.arrinfo[idx].upvotes--;
   }
 }
 
