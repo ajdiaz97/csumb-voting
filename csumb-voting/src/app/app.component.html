@@ -1,21 +1,37 @@
 <!--
 Single Page Application: CSUMB Voting Main Page
 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div id="content">
   <div id="title-head">
-  <h1 id="title">CSUMB Voting Reddit Thing</h1>
+  <h1 id="title">Issues at CSUMB</h1>
 </div>
 
-  <div id="issues" fxGrow fxLayoutAlign="center center">
-  <tr *ngFor="let a of arrinfo; let idx = index">
-    <td>{{a.name}} - {{a.description}}</td>
-    <td> Votes: {{a.upvotes}} </td>
-    <td><button class = "btn upvote" (click) = "upVote(idx)">up</button><button class = "btn downvote" (click) = "downVote(idx)">down</button></td>
-  </tr>
-</div>
-
-  <div id="add-issue-button">
-    <!-- This holds the button for adding an issue -->
-    <button mat-raised-button>Add an issue</button>
+<div class="issues" fxGrow fxLayoutAlign="center center" *ngFor="let a of arrinfo; let idx = index">
+  <tr>
+    <td class="title"><strong>{{a.name}}</strong></td>
+  </tr>  
+  <tr>
+      <td>{{a.description}}</td>
+      <div fxLayout="column">
+      <td id = "votes">{{a.upvotes}} </td>
+      <td id="updown">
+        <button class = "btn upvote" (click) = "upVote(idx)"><i class="fa fa-arrow-up"></i></button>
+      </td>
+      <td id="updown">
+        {{a.upvotes - a.downvotes}}
+      </td>
+      <td id="updown">
+        <button class = "btn downvote" (click) = "downVote(idx)"><i class="fa fa-arrow-down"></i></button>
+      </td>
+      <td id= "updown">{{a.downvotes}}</td>
+    </div>
+    </tr>
+    <hr>
   </div>
-</div>
+  
+    <div id="add-issue-button">
+      <!-- This holds the button for adding an issue -->
+      <button mat-raised-button>Add an issue</button>
+    </div>
+  </div>
