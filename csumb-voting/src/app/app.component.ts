@@ -55,7 +55,7 @@ export class AppComponent implements OnInit {
   }
 
   downVote(idx){
-    this.arrinfo[idx].upvotes--;
+    this.arrinfo[idx].downvotes++;
   }
 }
 
