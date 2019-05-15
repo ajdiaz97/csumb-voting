@@ -1,16 +1,44 @@
-[{
-        
-        "name": "Beesexual",
-        "description": "Beesexual is a Pornhub movement made to help advocate the importance of bees",
-        "upvotes": 0, 
-        "downvotes": 0, 
-        "comments":["test", "test1"]   
-        }, 
-        {
-        "name": "Earth Day", 
-        "description": "Save the Fucking Planet",
-        "upvotes": 0,
-        "downvotes": 0, 
-        "comments": ["test3", "test4", "test5"]
-            
-}]
+[
+  {
+    "name": "Parking is a Nightmare",
+    "description": "The parking situation on campus has recently become a ridiculous nightmare. I feel like they keep reducing the amount of parking without actually giving us a method of getting around campus. The scooters are cool but like you have to pay for them and not everyone wants to or can afford that. I feel like there should be better parking options for students.",
+    "upvotes": 21,
+    "downvotes": 1,
+    "comments":["Preach", "For real for real"]
+  },
+  {
+    "name": "DC and OE food",
+    "description": "Honestly the DC and OE food can be super unhealthy and I'd appreciate if there were more healthy options at the eating spaces.",
+    "upvotes": 17,
+    "downvotes": 3,
+    "comments": ["It's not all that bad but yeah more healthy options could be cool"]
+  },
+  {
+    "name": "Public transportation sucks",
+    "description": "The public transportation here I feel like isn't the greatest, especially on campus or when you're going to and from places here.",
+    "upvotes": 10,
+    "downvotes": 3,
+    "comments": [""]
+  },
+  {
+    "name": "Lack of Communication From Professors",
+    "description": "Professors don't always have the best communication with students, and that really makes classes stressful sometimes. I would love for certain professors to try to communicate with us better..",
+    "upvotes": 10,
+    "downvotes": 5,
+    "comments": [""]
+  },
+  {
+    "name": "AS Food Pantry at Weird Times",
+    "description": "Am I the only one that feels likethe AS food pantry is at the worst times?? Every time the AS food pantry happens I'm in class and I cannot ever make it. I feel like offering a survey or more times for students to attend would be really nice.",
+    "upvotes": 19,
+    "downvotes": 1,
+    "comments": [""]
+  },
+  {
+    "name": "Why do graduating seniors have to be stuck waiting for grades",
+    "description": "I know theres a lot of students who aren't graduating seniors, but for those of us who are, waiting for your grades as the semester winds down is insanely stressful and makes me anxious. I understand that professors need time to grade everything but for us having to fret about redoing a class is just lame.",
+    "upvotes": 18,
+    "downvotes": 4,
+    "comments": [""]
+  }
+]
